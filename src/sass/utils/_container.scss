@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  outline: 1px dotted blue;
+  @media screen and (max-width: $mobile) {
+    max-width: 100vw;
+  }
+  @include for-size(mobile) {
+    width: $mobile;
+  }
+  @include for-size(tablet) {
+    padding: 0 47px;
+    width: $tablet;
+  }
+  @include for-size(desktop) {
+    padding: 0 85px;
+    width: $desktop;
+  }
+}
