@@ -10,7 +10,7 @@
 
   transform: scale(1);
   transition: transform var(--transition-cubic);
-  @include for-size(micro-mobile-only) {
+  @include for-size(mobile-only) {
     padding: 20px;
   }
   @include for-size(desktop) {
@@ -53,7 +53,8 @@
   visibility: visible;
   pointer-events: all;
   opacity: 1;
-  transition: opacity var(--transition-cubic), visibility var(--transition-cubic);
+  transition: opacity var(--transition-cubic),
+    visibility var(--transition-cubic);
 }
 
 .is-hidden {
