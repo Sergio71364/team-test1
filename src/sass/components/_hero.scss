@@ -1,0 +1,119 @@
+.hero {
+  position: relative;
+  padding-top: 64px;
+  @include for-size(tablet) {
+    padding-top: 188px;
+  }
+  @include for-size(desktop) {
+    padding-top: 164px;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    @include for-size(tablet) {
+      flex-direction: row;
+      justify-content: end;
+      gap: 40px;
+      margin-left: auto;
+    }
+  }
+  &--logo {
+    height: 103px;
+    width: 303px;
+    margin-top: 117px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    color: var(--color-primary-white);
+    @include for-size(tablet) {
+      margin-top: 0;
+      height: 138px;
+      width: 404px;
+    }
+    // @include for-size(desktop) {
+    //   margin-top: 217px;
+    // }
+  }
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-primary-white);
+    margin-bottom: 178px;
+    @include for-size(tablet) {
+      margin-bottom: 226px;
+    }
+    @include for-size(desktop) {
+      margin-bottom: 248px;
+    }
+  }
+}
+
+.hero-canvas {
+  // max-width: 1600px;
+  height: 740px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, var(--color-gradient1), var(--color-gradient1)),
+    url('../images/hotel-hero-mobile@1x.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include for-size(tablet) {
+    height: 720px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero-canvas {
+    background-image: linear-gradient(to right, var(--color-gradient1), var(--color-gradient1)),
+      url('../images/hotel-hero-mobile@2x.jpg');
+  }
+}
+
+@include for-size(tablet-only) {
+  .hero-canvas {
+    background-image: linear-gradient(to right, var(--color-gradient1), var(--color-gradient1)),
+      url('../images/hotel-hero-tablet@1x.jpg');
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-canvas {
+      background-image: linear-gradient(to right, var(--color-gradient1), var(--color-gradient1)),
+        url('../images/hotel-hero-tablet@2x.jpg');
+    }
+  }
+}
+
+@include for-size(desktop) {
+  .hero-canvas {
+    background-image: linear-gradient(to right, var(--color-gradient1), var(--color-gradient1)),
+      url('../images/hotel-hero-desktop@1x.jpg');
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-canvas {
+      background-image: linear-gradient(to right, var(--color-gradient1), var(--color-gradient1)),
+        url('../images/hotel-hero-desktop@2x.jpg');
+    }
+  }
+}
+
+.table {
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.prices {
+  @include for-size(mobile-only) {
+    display: none;
+  }
+}
