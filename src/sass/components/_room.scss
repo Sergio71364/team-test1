@@ -37,40 +37,35 @@
 }
 
 .slick {
-  &__slider-wrapper {
-    width: calc(100% + 30px); //we need more width for the shadows on the edges
-    padding: 0 15px; //space for the shadows
-    margin-left: -15px; //put the div in its original position
-    overflow: hidden; //hide the overflow
-  }
+  width: calc(100% + 30px); //we need more width for the shadows on the edges
+  padding: 32px 15px; //space for the shadows
+  margin-left: -15px; //put the div in its original position
+  overflow: hidden; //hide the overflow
   &__list {
-    // width: 320px;
     transform: translateX(-120px);
-    overflow: visible;
-    display: flex;
-
-    margin-top: 32px;
     margin-bottom: 90px;
-    margin-left: -8px;
-    margin-right: -8px;
-    // padding: 0 0 0 20%;
   }
-
   &__box {
-    // width: 194px;
-    // height: 194px;
-
-    // border-radius: 2px;
-  }
-  &__item {
-    // max-width: 194px;
-    // box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.25);
-    margin: 0 8px;
+    opacity: 0;
+    box-shadow: none;
+    background: #dadada;
+    border-radius: 2px;
+    transition: box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    .slick-active & {
+      opacity: 1;
+      box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.25);
+    }
   }
 }
 
 .slick-slide {
   width: 194px;
+  margin: 0 8px;
+}
+.slick-list {
+  overflow: visible;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 .my-slick-prev,
@@ -79,11 +74,6 @@
   height: 32px;
   width: 32px;
   bottom: calc(-32px - 20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -92,11 +82,16 @@
 }
 
 .my-slick-prev {
-  left: 135px;
+  left: 118px;
   background-image: url('../images/arrow-left.svg');
 }
 
 .my-slick-next {
-  left: calc(135px + 32px + 32px);
+  left: calc(118px + 32px + 32px);
   background-image: url('../images/arrow-right.svg');
+}
+
+.slick-disabled {
+  opacity: 0.7;
+  cursor: default;
 }
