@@ -1,6 +1,5 @@
 body {
   background-color: var(--color-primary-white);
-
   font-family: var(--font-primary);
   letter-spacing: 0.03em;
   font-size: var(--font-primary-size);
@@ -25,34 +24,6 @@ body {
   fill: currentColor;
   &--white {
     color: var(--color-primary-white);
-  }
-}
-
-.button {
-  display: block;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
-  min-width: 236px;
-  min-height: 48px;
-  border-radius: 25px;
-  border: 2px solid var(--color-primary-white);
-  color: var(--color-accent-yellow);
-  background: rgba(0, 0, 0, 0.4);
-  &--shifted {
-    margin-left: 60px;
-  }
-  &--short {
-    min-width: 232px;
-  }
-  &:hover,
-  &:active {
-    cursor: pointer;
-    color: var(--color-accent-yellow);
-    background-color: var(--color-primary-white);
-    border-color: var(--color-accent-yellow);
   }
 }
 
@@ -145,7 +116,8 @@ body {
     color: var(--color-background-grey);
     text-decoration: none;
     outline: none;
-    transition: color var(--transition-cubic), background-color var(--transition-cubic);
+    transition: color var(--transition-cubic),
+      background-color var(--transition-cubic);
     &--white {
       color: var(--color-primary-white);
       background-color: rgba(255, 255, 255, 0.1);

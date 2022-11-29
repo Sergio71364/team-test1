@@ -1,24 +1,51 @@
 .room {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: #fffdee;
+  @include for-size(tablet) {
+    padding-top: 62px;
+    padding-bottom: 104px;
+  }
   &__subtitle {
+    font-family: var(--font-secondary);
     font-size: 20px;
     line-height: 1.15;
     color: #b4b4b4;
     margin-bottom: 8px;
+    @include for-size(tablet) {
+      font-size: 32px;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
   }
   &--icon {
-    color: rgba(73, 72, 72, 1);
+    color: #494848;
     margin-bottom: 32px;
+    @include for-size(tablet) {
+      width: 202px;
+      height: 69px;
+      margin-bottom: 62px;
+    }
   }
   &__title {
+    font-family: var(--font-secondary);
     font-weight: 700;
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.05em;
     margin-bottom: 12px;
     color: #000000;
+    @include for-size(tablet) {
+      font-size: 30px;
+      line-height: 1.13;
+      margin-bottom: 16px;
+    }
+    @include for-size(desktop) {
+      font-size: 36px;
+      line-height: 1.13;
+      margin-bottom: 24px;
+    }
   }
   &__description {
     font-weight: 600;
@@ -27,71 +54,45 @@
     letter-spacing: 0.02em;
     color: #5f5f5f;
     margin-bottom: 32px;
+    @include for-size(tablet) {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 116px;
+      max-width: 439px;
+    }
   }
   &__image-wrapper {
+    outline: 1px dotted green;
     height: auto;
     width: 244px;
     margin-left: auto;
     border-radius: 2px;
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+    background-color: #dadada;
+    @include for-size(tablet) {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      width: 400px;
+      height: 524px;
+      border-radius: 0;
+      box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+    }
   }
-}
-
-.slick {
-  width: calc(100% + 30px); //we need more width for the shadows on the edges
-  padding: 32px 15px; //space for the shadows
-  margin-left: -15px; //put the div in its original position
-  overflow: hidden; //hide the overflow
-  &__list {
-    transform: translateX(-120px);
-    margin-bottom: 90px;
-  }
-  &__box {
-    opacity: 0;
-    box-shadow: none;
-    background: #dadada;
-    border-radius: 2px;
-    transition: box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    .slick-active & {
-      opacity: 1;
-      box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.25);
+  &__group {
+    @include for-size(tablet) {
+      display: flex;
     }
   }
 }
 
-.slick-slide {
-  width: 194px;
-  margin: 0 8px;
-}
-.slick-list {
-  overflow: visible;
-  margin-left: -8px;
-  margin-right: -8px;
-}
-
-.my-slick-prev,
-.my-slick-next {
-  position: absolute;
-  height: 32px;
-  width: 32px;
-  bottom: calc(-32px - 20px);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-.my-slick-prev {
-  left: 118px;
-  background-image: url('../images/arrow-left.svg');
-}
-
-.my-slick-next {
-  left: calc(118px + 32px + 32px);
-  background-image: url('../images/arrow-right.svg');
-}
-
-.slick-disabled {
-  opacity: 0.7;
-  cursor: default;
+.btn-block {
+  outline: 1px dotted green;
+  @include for-size(tablet) {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
 }

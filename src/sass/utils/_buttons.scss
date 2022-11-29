@@ -1,0 +1,45 @@
+.button {
+  display: block;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 236px;
+  min-height: 48px;
+  border-radius: 25px;
+  border: 2px solid var(--color-primary-white);
+  color: var(--color-accent-yellow);
+  background: rgba(0, 0, 0, 0.4);
+  @include for-size(mobile-only) {
+    & + & {
+      margin-top: 24px;
+    }
+  }
+  @include for-size(tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &--shifted {
+    margin-left: 60px;
+  }
+  &--short {
+    min-width: 232px;
+  }
+  &--dark {
+    background-color: black;
+    & + & {
+      margin-top: 16px;
+    }
+  }
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: var(--color-accent-yellow);
+    background-color: var(--color-primary-white);
+    border-color: var(--color-accent-yellow);
+  }
+}
