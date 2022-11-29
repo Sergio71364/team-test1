@@ -7,6 +7,10 @@
     padding-top: 62px;
     padding-bottom: 104px;
   }
+  &--container {
+    position: relative;
+    z-index: 1;
+  }
   &__subtitle {
     font-family: var(--font-secondary);
     font-size: 20px;
@@ -62,7 +66,6 @@
     }
   }
   &__image-wrapper {
-    outline: 1px dotted green;
     height: auto;
     width: 244px;
     margin-left: auto;
@@ -71,7 +74,7 @@
     background-color: #dadada;
     @include for-size(tablet) {
       position: absolute;
-      top: -32px;
+      top: -95px;
       left: 50%;
       width: 400px;
       height: 524px;
@@ -86,8 +89,28 @@
   }
 }
 
+.bg-striped {
+  @include for-size(tablet) {
+    position: absolute;
+    top: 0;
+    left: calc(50vw - $tablet / 2 + 31px);
+    width: 800px;
+    height: 100%;
+    background-image: linear-gradient(
+      90deg,
+      transparent 49.79%,
+      rgba(186, 186, 186, 0.4) 49.79%,
+      rgba(186, 186, 186, 0.4) 50%,
+      transparent 50%,
+      transparent 99.79%,
+      rgba(186, 186, 186, 0.4) 99.79%,
+      rgba(186, 186, 186, 0.4) 100%
+    );
+    background-size: 481px;
+  }
+}
+
 .btn-block {
-  outline: 1px dotted green;
   @include for-size(tablet) {
     margin-left: auto;
     display: flex;

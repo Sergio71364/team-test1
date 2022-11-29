@@ -3,7 +3,7 @@
   padding: 32px 15px; //space for the shadows
   margin-left: -15px; //put the div in its original position
   overflow: hidden; //hide the overflow
-  outline: 1px dotted green;
+  // outline: 1px dotted green;
   @include for-size(tablet) {
     padding: 60px 60px; //space for the shadows
     margin-left: -47px;
