@@ -1,0 +1,18 @@
+@import './fonts/fonts';
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/mixins';
+@import './utils/normalize';
+@import './utils/reset';
+@import './utils/container';
+
+@import './utils/placeholders';
+@import './utils/common';
+@import './utils/buttons';
+@import './utils/slick';
+
+@import './components/modal';
+@import './components/header';
+@import './components/hero-details';
+@import './components/hero';
+@import './components/room';

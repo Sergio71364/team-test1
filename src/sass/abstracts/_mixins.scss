@@ -1,0 +1,108 @@
+//============
+// Mixins
+//============
+
+//add overlay on element, between () is the color of the overlay
+@mixin overlay($color, $opacity) {
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: $color;
+    opacity: $opacity;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+
+// add on element with equal width & height
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+//use for pseudo element
+@mixin pseudo {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+//use to troncate elements, meaning it will end the sentence or word with "..." if its too long
+@mixin truncate($max-width) {
+  max-width: $max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//BREAKPOINTS
+$small: 600px;
+$medium: 1024px;
+$large: 1440px;
+$xlarge: 1920px;
+
+$mobile: 414px;
+$tablet: 1024px;
+$desktop: 1280px;
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == small {
+    @media (min-width: $small) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (min-width: $medium) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (min-width: $large) {
+      @content;
+    }
+  } @else if $breakpoint == xlarge {
+    @media (min-width: $xlarge) {
+      @content;
+    }
+  }
+}
+
+@mixin for-size($range) {
+  @if $range == mobile-only {
+    @media screen and (max-width: #{$tablet - 0.02}) {
+      @content;
+    }
+  } @else if $range == mobile-only {
+    @media screen and (max-width: #{$tablet - 0.02}) {
+      @content;
+    }
+  } @else if $range == mobile {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  } @else if $range == tablet-only {
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 0.02}) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $range == retina {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $range == notDesktop {
+    @media screen and (max-width: #{$desktop - 0.02}) {
+      @content;
+    }
+  }
+}

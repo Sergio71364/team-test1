@@ -1,0 +1,64 @@
+.modal {
+  position: relative;
+  overflow-y: auto;
+  width: 100vw;
+  height: 780px;
+  padding: 60px;
+  background-color: var(--color-dark-lemon);
+  border: 1px solid var(--color-accent);
+  border-radius: 2px;
+
+  transform: scale(1);
+  transition: transform var(--transition-cubic);
+  @include for-size(mobile-only) {
+    padding: 20px;
+  }
+  @include for-size(desktop) {
+    max-width: 528px;
+    max-height: 581px;
+  }
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color var(--transition-cubic);
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+  .is-hidden & {
+    transform: scale(0.5);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+  transition: opacity var(--transition-cubic),
+    visibility var(--transition-cubic);
+}
+
+.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
