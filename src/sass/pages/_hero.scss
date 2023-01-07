@@ -1,0 +1,62 @@
+.hero {
+  padding-top: 181px;
+  padding-bottom: 102px;
+  text-align: center;
+  &__title {
+    font-family: var(--font-logo);
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1.07;
+    letter-spacing: 0.3em;
+    margin-bottom: 24px;
+    @include for-size(mobile) {
+      font-size: 96px;
+    }
+  }
+  &__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+  }
+  &__motto {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    margin-bottom: 113px;
+  }
+  &__home {
+    position: relative;
+
+    @include backgroundImageRetina(
+      $page: hero,
+      $section: home,
+      $part: mobile,
+      $file: hero-mob,
+      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+    );
+
+    @include for-size(tablet) {
+      @include backgroundImageRetina(
+        $page: hero,
+        $section: home,
+        $part: tablet,
+        $file: hero-tab,
+        $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+      );
+    }
+
+    @include for-size(desktop) {
+      @include backgroundImageRetina(
+        $page: hero,
+        $section: home,
+        $part: desktop,
+        $file: hero-desk,
+        $webp-file: '../images/hero/home/desktop/hero-desk.webp'
+      );
+    }
+  }
+}

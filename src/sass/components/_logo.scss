@@ -1,0 +1,12 @@
+.logo {
+  @extend %link;
+
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.08;
+  letter-spacing: 0.3em;
+  @include for-size(mobile) {
+    font-size: 36px;
+  }
+}
