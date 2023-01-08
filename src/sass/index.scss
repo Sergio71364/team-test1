@@ -10,6 +10,7 @@
 @import 'abstracts/functions';
 
 // BASE
+
 @import 'base/reset';
 @import 'base/global';
 @import 'base/typography';
@@ -24,6 +25,8 @@
 
 // COMPONENTS
 @import 'components/logo';
+@import 'components/address';
+@import 'components/socials';
 
 @import 'components/alert';
 @import 'components/banner';

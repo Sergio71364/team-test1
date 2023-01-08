@@ -1,0 +1,29 @@
+.address {
+  @extend %link;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  max-width: 210px;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(243, 198, 83, 0.7);
+  border-radius: 2px;
+  padding: 6px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  @include for-size(mobile) {
+    right: calc((100% - $mobile) / 2 - var(--padding-mobile));
+  }
+  @include for-size(tablet) {
+  }
+  @include for-size(desktop) {
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #e5e5e5;
+  }
+}

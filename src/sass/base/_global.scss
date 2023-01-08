@@ -4,7 +4,7 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 var(--padding-mobile);
   outline: 1px dotted rgba(105, 20, 216, 0.726);
   @media screen and (max-width: $mobile) {
     max-width: 100vw;
@@ -35,15 +35,6 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.icon {
-  display: block;
-  color: var(--color-accent-yellow);
-  fill: currentColor;
-  &--white {
-    color: var(--color-primary-white);
-  }
 }
 
 .visually-hidden {
