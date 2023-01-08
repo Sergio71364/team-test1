@@ -3,6 +3,10 @@
   padding-bottom: 102px;
   text-align: center;
   position: relative;
+  @include for-size(tablet) {
+    padding-top: 188px;
+    padding-bottom: 64px;
+  }
   &__title {
     font-family: var(--font-logo);
     font-weight: 700;
@@ -13,6 +17,14 @@
     @include for-size(mobile) {
       font-size: 96px;
     }
+    @include for-size(tablet) {
+      font-size: 128px;
+      margin-bottom: 16px;
+    }
+    @include for-size(deskyop) {
+      font-size: 128px;
+      margin-bottom: 32px;
+    }
   }
   &__subtitle {
     font-weight: 600;
@@ -20,6 +32,13 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
     margin-bottom: 40px;
+    @include for-size(tablet) {
+      font-size: 20px;
+      margin-bottom: 56px;
+    }
+    @include for-size(deskyop) {
+      margin-bottom: 64px;
+    }
   }
   &__motto {
     font-family: var(--font-secondary);
@@ -28,6 +47,15 @@
     line-height: 1.15;
     letter-spacing: 0.05em;
     margin-bottom: 113px;
+    @include for-size(tablet) {
+      font-size: 36px;
+      margin-bottom: 145px;
+    }
+  }
+  &__buttons {
+    @include for-size(tablet) {
+      text-align: right;
+    }
   }
   &__home {
     position: relative;

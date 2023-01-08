@@ -60,12 +60,12 @@
 }
 
 @mixin for-size($range) {
-  @if $range == mobile-only {
-    @media screen and (max-width: #{$tablet - 0.02}) {
+  @if $range == micro-mobile-only {
+    @media screen and (max-width: #{$mobile - 0.02}) {
       @content;
     }
   } @else if $range == mobile-only {
-    @media screen and (max-width: #{$tablet - 0.02}) {
+    @media screen and (min-width: $mobile) and (max-width: #{$tablet - 0.02}) {
       @content;
     }
   } @else if $range == mobile {

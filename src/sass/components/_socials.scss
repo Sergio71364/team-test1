@@ -3,14 +3,20 @@
   display: flex;
   gap: 20px;
   position: absolute;
-  left: 0;
-  bottom: 20px;
-  outline: 1px dotted red;
-  @include for-size(mobile) {
-    left: calc(((100% - $mobile) / 2) + var(--padding-mobile));
+  @include for-size(micro-mobile-only) {
+    left: var(--padding-mobile);
+    bottom: 20px;
   }
-  @include for-size(tablet) {
+  @include for-size(mobile-only) {
+    left: calc(((100% - $mobile) / 2) + var(--padding-mobile));
+    bottom: 20px;
+  }
+  @include for-size(tablet-only) {
+    left: calc(((100% - $tablet) / 2) + var(--padding-tablet));
+    bottom: 15px;
   }
   @include for-size(desktop) {
+    top: 38px;
+    right: calc(((100% - $desktop) / 2) + var(--padding-desktop));
   }
 }

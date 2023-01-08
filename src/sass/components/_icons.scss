@@ -9,4 +9,9 @@
     width: 20px;
     height: 20px;
   }
+  &__phone {
+    @include for-size(tablet) {
+      margin-right: 8px;
+    }
+  }
 }

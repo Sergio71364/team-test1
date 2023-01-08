@@ -9,4 +9,7 @@
   @include for-size(mobile) {
     font-size: 36px;
   }
+  @include for-size(tablet) {
+    font-size: 43px;
+  }
 }

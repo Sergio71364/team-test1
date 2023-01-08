@@ -22,5 +22,16 @@
 }
 
 .button + .button {
-  margin-top: 24px;
+  @include for-size(micro-mobile-only) {
+    margin-top: 24px;
+  }
+  @include for-size(mobile-only) {
+    margin-top: 24px;
+  }
+  @include for-size(tablet) {
+    margin-left: 40px;
+  }
+  @include for-size(desktop) {
+    margin-left: 60px;
+  }
 }
