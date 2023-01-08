@@ -39,16 +39,6 @@
   text-overflow: ellipsis;
 }
 
-//BREAKPOINTS
-$small: 600px;
-$medium: 1024px;
-$large: 1440px;
-$xlarge: 1920px;
-
-$mobile: 414px;
-$tablet: 1024px;
-$desktop: 1280px;
-
 @mixin breakpoint($breakpoint) {
   @if $breakpoint == small {
     @media (min-width: $small) {

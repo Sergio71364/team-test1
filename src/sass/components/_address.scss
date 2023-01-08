@@ -2,7 +2,7 @@
   @extend %link;
   position: absolute;
   top: 64px;
-  right: 0;
+  right: var(--padding-mobile);
   max-width: 210px;
   width: 100%;
   height: auto;
@@ -13,7 +13,7 @@
   gap: 6px;
   align-items: center;
   @include for-size(mobile) {
-    right: calc((100% - $mobile) / 2 - var(--padding-mobile));
+    right: calc(((100% - $mobile) / 2) + var(--padding-mobile));
   }
   @include for-size(tablet) {
   }

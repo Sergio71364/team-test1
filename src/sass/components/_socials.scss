@@ -7,7 +7,7 @@
   bottom: 20px;
   outline: 1px dotted red;
   @include for-size(mobile) {
-    left: calc((100% - $mobile) / 2 - var(--padding-mobile));
+    left: calc(((100% - $mobile) / 2) + var(--padding-mobile));
   }
   @include for-size(tablet) {
   }
