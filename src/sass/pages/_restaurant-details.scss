@@ -1,11 +1,23 @@
 .rest-details {
+  padding-top: 24px;
   background-color: #7a7a7a;
-  &__ {
+  &__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #ffffff;
     margin-bottom: 20px;
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #bababa;
+  }
+  &__wrapper {
+    margin-left: auto;
+    max-width: 259px;
   }
 }
