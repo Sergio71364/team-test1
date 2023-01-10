@@ -19,5 +19,9 @@
   &__wrapper {
     margin-left: auto;
     max-width: 259px;
+    @include for-size(tablet) {
+      margin-left: 278px;
+      max-width: 610px;
+    }
   }
 }

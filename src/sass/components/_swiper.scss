@@ -45,7 +45,7 @@
   }
 }
 
-.swiper-container-out {
+section[data-slider='basic'] .swiper-container-out {
   overflow-x: hidden;
   // width: 86%;
   padding: 60px;
@@ -53,6 +53,18 @@
     margin-top: -120px;
     margin-right: -60px;
     width: 58%;
+  }
+  @include for-size(tablet) {
+    width: 62%;
+  }
+}
+section[data-slider='dark'] .swiper-container-out {
+  overflow-x: hidden;
+  // width: 86%;
+  padding: 60px;
+  @include for-size(tablet) {
+    margin-right: -60px;
+    width: 80%;
   }
   @include for-size(tablet) {
     width: 62%;
@@ -73,6 +85,12 @@
 .swiper-slide.swiper-slide-active,
 .swiper-slide.swiper-slide-next {
   visibility: visible;
+}
+
+.swiper-dark .swiper-slide.swiper-slide-prev {
+  @include for-size(tablet) {
+    visibility: visible;
+  }
 }
 
 .right {
