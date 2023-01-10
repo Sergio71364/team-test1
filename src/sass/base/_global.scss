@@ -5,7 +5,7 @@
 .container {
   margin: 0 auto;
   padding: 0 var(--padding-mobile);
-  outline: 1px dotted rgba(105, 20, 216, 0.726);
+  // outline: 1px dotted rgba(105, 20, 216, 0.726);
   @media screen and (max-width: $mobile) {
     max-width: 100vw;
   }
@@ -20,11 +20,15 @@
     padding: 0 var(--padding-desktop);
     max-width: $desktop;
   }
+  &__rest-about {
+    position: relative;
+  }
 }
 
 body {
   color: var(--color-white);
   background-color: #fffdee;
+  // background-color: #f5e780;
   font-family: var(--font-primary);
   letter-spacing: 0.03em;
   font-size: var(--font-primary-size);

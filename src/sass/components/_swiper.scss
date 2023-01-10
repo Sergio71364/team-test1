@@ -1,0 +1,51 @@
+.swiper-wrapper {
+  @extend %list;
+}
+
+.swiper-arrows {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  gap: 32px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  left: unset;
+  right: unset;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 0;
+}
+
+.swiper-large .swiper-slide {
+  width: 245px;
+  @include for-size(tablet) {
+    width: 254px;
+  }
+}
+
+.swiper-container {
+  overflow: hidden;
+  width: 86%;
+  @include for-size(tablet) {
+    width: 50%;
+  }
+}
+
+.right {
+  margin-left: auto;
+}
+
+.right .swiper-arrows {
+  justify-content: end;
+  margin-top: var(--padding-mobile);
+  margin-right: var(--padding-mobile);
+}

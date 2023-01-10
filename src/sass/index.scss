@@ -27,13 +27,14 @@
 @import 'components/logo';
 @import 'components/address';
 @import 'components/socials';
+@import 'components/swiper';
+@import 'components/icons';
+@import 'components/buttons';
 
 @import 'components/alert';
 @import 'components/banner';
-@import 'components/buttons';
 @import 'components/card';
 @import 'components/forms';
-@import 'components/icons';
 @import 'components/menu';
 @import 'components/modal';
 @import 'components/progress';
@@ -41,6 +42,8 @@
 // PAGES
 @import 'pages/home';
 @import 'pages/hero';
+@import 'pages/restaurant-about';
+@import 'pages/restaurant-details';
 
 // THEMES
 @import 'themes/theme';
