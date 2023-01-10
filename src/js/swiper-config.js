@@ -7,14 +7,14 @@ function swiperSlider() {
     basicSliders.forEach(slider => {
       const swiper = new Swiper(slider.querySelector('.swiper-basic'), {
         loop: true,
-        loopSlides: 6,
-        observer: true,
-        observeParents: true,
-        observeSlideChildren: true,
-        autoHeight: true,
+        // loopSlides: 6,
+        // observer: true,
+        // observeParents: true,
+        // observeSlideChildren: true,
+        // autoHeight: true,
         slidesPerView: 'auto',
         spaceBetween: 25,
-        speed: 400,
+        // speed: 400,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -32,6 +32,7 @@ function swiperSlider() {
           // when window width is >= 1024px
           1024: {
             spaceBetween: 40,
+
           },
         },
       });
@@ -41,17 +42,17 @@ function swiperSlider() {
     darkSliders.forEach(slider => {
       const swiper = new Swiper(slider.querySelector('.swiper-dark'), {
         loop: true,
-        loopSlides: 6,
-        observer: true,
-        observeParents: true,
-        observeSlideChildren: true,
-        autoHeight: true,
+        // loopSlides: 6,
+        // observer: true,
+        // observeParents: true,
+        // observeSlideChildren: true,
+        // autoHeight: true,
         slidesPerView: 'auto',
         spaceBetween: 20,
-        speed: 400,
+        // speed: 400,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next-dark',
+          prevEl: '.swiper-button-prev-dark',
         },
         breakpoints: {
           //   when window width is >= 320px
