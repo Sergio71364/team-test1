@@ -64,15 +64,20 @@ section[data-slider='basic'] .swiper-container-out {
 }
 section[data-slider='dark'] .swiper-container-out {
   overflow-x: hidden;
+  outline: 1px dotted red;
   // width: 86%;
   // padding: 60px;
   @include for-size(tablet) {
     // margin-right: -60px;
-    width: 59%;
+    width: 68%;
   }
   @include for-size(desktop) {
     width: 62%;
   }
+}
+
+.swiper-slide__image {
+  height: 100%;
 }
 
 .swiper-container-in {
@@ -89,6 +94,10 @@ section[data-slider='basic'] .swiper-slide {
   border-radius: 2px;
 }
 
+.swiper-dark {
+  transform: translateX(190px);
+}
+
 .swiper-slide.swiper-slide-active,
 .swiper-slide.swiper-slide-next {
   visibility: visible;
@@ -97,6 +106,7 @@ section[data-slider='basic'] .swiper-slide {
 section[data-slider='dark'] .swiper-slide-prev {
   @include for-size(tablet) {
     visibility: visible;
+    // width: 150px;
   }
 }
 
@@ -105,7 +115,7 @@ section[data-slider='dark'] .swiper-slide-prev {
   margin-left: calc(-1 * var(--padding-mobile));
   @include for-size(tablet) {
     margin-left: auto;
-    margin-right: calc(-1 * var(--padding-tablet));
+    margin-right: 0;
   }
   @include for-size(desktop) {
     margin-left: auto;
