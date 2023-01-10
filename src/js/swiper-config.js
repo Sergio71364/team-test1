@@ -42,11 +42,11 @@ function swiperSlider() {
     darkSliders.forEach(slider => {
       const swiper = new Swiper(slider.querySelector('.swiper-dark'), {
         loop: true,
-        // loopSlides: 6,
-        // observer: true,
-        // observeParents: true,
-        // observeSlideChildren: true,
-        // autoHeight: true,
+        loopSlides: 6,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        autoHeight: true,
         slidesPerView: 'auto',
         spaceBetween: 20,
         // speed: 400,

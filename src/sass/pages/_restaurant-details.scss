@@ -1,5 +1,6 @@
 .rest-details {
   padding-top: 24px;
+  padding-bottom: 40px;
   background-color: #7a7a7a;
   &__title {
     font-weight: 700;
@@ -23,6 +24,14 @@
     @include for-size(tablet) {
       margin-left: 278px;
       max-width: 610px;
+    }
+  }
+  &__wrapper-out {
+    @include for-size(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }

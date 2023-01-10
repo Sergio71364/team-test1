@@ -35,3 +35,11 @@
     margin-left: 60px;
   }
 }
+
+.buttons-wrapper {
+  text-align: center;
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
