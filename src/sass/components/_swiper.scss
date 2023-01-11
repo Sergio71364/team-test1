@@ -61,9 +61,9 @@ section[data-slider='basic'] .swiper-container-out {
   }
 }
 section[data-slider='dark'] .swiper-container-out {
-  overflow-x: hidden;
+  overflow: hidden;
   outline: 1px dotted red;
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
   // width: 86%;
   // padding: 60px;
   @include for-size(tablet) {
@@ -71,7 +71,7 @@ section[data-slider='dark'] .swiper-container-out {
     width: 68%;
   }
   @include for-size(desktop) {
-    width: 58%;
+    width: 72%;
   }
 }
 

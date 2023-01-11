@@ -53,8 +53,18 @@
     }
   }
   &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
     @include for-size(tablet) {
-      text-align: right;
+      flex-direction: row;
+      justify-content: end;
+      gap: 24px;
+      margin-left: auto;
+    }
+    @include for-size(desktop) {
+      gap: 60px;
     }
   }
   &__home {

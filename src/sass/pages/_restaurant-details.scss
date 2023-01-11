@@ -31,7 +31,47 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
     }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    @include for-size(tablet) {
+      margin-bottom: 51px;
+    }
+  }
+}
+
+.rest-details {
+  @include backgroundImageRetina(
+    $page: home,
+    $section: restaurant-details,
+    $part: mobile,
+    $file: background-mob,
+    $webp-file: '../images/home/restaurant-details/mobile/background-mob.webp'
+  );
+
+  @include for-size(tablet) {
+    @include backgroundImageRetina(
+      $page: home,
+      $section: restaurant-details,
+      $part: tablet,
+      $file: background-tab,
+      $webp-file: '../images/home/restaurant-details/tablet/background-tab.webp'
+    );
+  }
+
+  @include for-size(desktop) {
+    @include backgroundImageRetina(
+      $page: home,
+      $section: restaurant-details,
+      $part: desktop,
+      $file: background-desk,
+      $webp-file:
+        '../images/home/restaurant-details/desktop/background-desk.webp'
+    );
   }
 }

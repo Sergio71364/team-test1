@@ -20,26 +20,3 @@
     cursor: pointer;
   }
 }
-
-.button + .button {
-  @include for-size(micro-mobile-only) {
-    margin-top: 24px;
-  }
-  @include for-size(mobile-only) {
-    margin-top: 24px;
-  }
-  @include for-size(tablet) {
-    margin-left: 40px;
-  }
-  @include for-size(desktop) {
-    margin-left: 60px;
-  }
-}
-
-.buttons-wrapper {
-  text-align: center;
-  @include for-size(tablet) {
-    display: flex;
-    flex-direction: column;
-  }
-}
