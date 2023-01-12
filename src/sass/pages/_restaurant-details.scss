@@ -25,6 +25,11 @@
       margin-left: 278px;
       max-width: 610px;
     }
+    &--left {
+      text-align: right;
+      margin-right: auto;
+      margin-left: 0;
+    }
   }
   &__wrapper-out {
     @include for-size(tablet) {
@@ -32,6 +37,10 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: flex-end;
+
+      &.row--reversed {
+        flex-direction: row;
+      }
     }
   }
   &__buttons {
