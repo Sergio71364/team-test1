@@ -80,3 +80,46 @@ body {
     }
   }
 }
+
+.row {
+  @include for-size(tablet) {
+    display: flex;
+    gap: 30px;
+    justify-content: start;
+  }
+  &--horizontal-mobile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @include for-size(tablet) {
+      margin-top: -55px;
+      gap: 48px;
+    }
+  }
+  &--reversed {
+    flex-direction: row-reverse;
+    @include for-size(tablet) {
+      justify-content: end;
+    }
+  }
+}
+
+.mobile-left {
+  margin-right: auto;
+}
+
+.mobile-right {
+  margin-left: auto;
+}
+
+.mobile-right h2,
+.mobile-right h3 {
+  text-align: right;
+}
+
+.col {
+  max-width: 258px;
+  @include for-size(tablet) {
+    max-width: 439px;
+  }
+}

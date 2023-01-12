@@ -1,5 +1,11 @@
 .swiper-wrapper {
   @extend %list;
+  .left & {
+    left: 15px;
+  }
+  .right & {
+    right: 10px;
+  }
 }
 
 .swiper-arrows {
@@ -95,9 +101,25 @@ section[data-slider='basic'] .swiper-slide {
   }
 }
 
-.swiper-slide.swiper-slide-active,
-.swiper-slide.swiper-slide-next {
+.right .swiper-slide-active,
+.left .swiper-slide-active {
   visibility: visible;
+}
+
+.right .swiper-slide-next {
+  visibility: visible;
+}
+
+.left .swiper-slide-prev {
+  visibility: visible;
+  @include for-size(tablet) {
+    visibility: hidden;
+  }
+}
+.left .swiper-slide-next {
+  @include for-size(tablet) {
+    visibility: visible;
+  }
 }
 
 section[data-slider='dark'] .swiper-slide-prev {
@@ -107,11 +129,20 @@ section[data-slider='dark'] .swiper-slide-prev {
 }
 
 .right {
-  margin-right: calc(-1 * var(--padding-mobile));
-  margin-left: calc(-1 * var(--padding-mobile));
+  margin-right: 0;
+  // margin-left: calc(-1 * var(--padding-mobile));
   @include for-size(tablet) {
     margin-left: auto;
     margin-right: 0;
+  }
+}
+
+.left {
+  // margin-right: calc(-1 * var(--padding-mobile));
+  margin-left: 0;
+  @include for-size(tablet) {
+    margin-right: auto;
+    margin-left: 0;
   }
 }
 
