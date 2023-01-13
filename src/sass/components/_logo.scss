@@ -12,13 +12,16 @@
   @include for-size(tablet) {
     font-size: 43px;
   }
-  &__rest-about {
+  &--grey {
     font-size: 40px;
     color: #494848;
     margin-bottom: 12px;
     @include for-size(tablet) {
       font-size: 64px;
       margin-bottom: 24px;
+    }
+    @include for-size(desktop) {
+      color: #828282;
     }
   }
   &__rest-details {
