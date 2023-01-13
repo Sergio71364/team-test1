@@ -4,46 +4,7 @@
   @include for-size(tablet) {
     padding-top: 120px;
   }
-  &__title {
-    font-family: var(--font-secondary);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;
-    color: #b4b4b4;
-    margin-bottom: 12px;
-    @include for-size(tablet) {
-      margin-bottom: 4px;
-      font-size: 32px;
-    }
-  }
-  &__subtitle1 {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #5f5f5f;
-    margin-bottom: 28px;
 
-    @include for-size(tablet) {
-      font-size: 16px;
-
-      margin-bottom: 142px;
-    }
-  }
-  &__subtitle2 {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #c79002;
-    margin-bottom: 28px;
-    max-width: 163px;
-    @include for-size(tablet) {
-      font-size: 16px;
-      max-width: 312px;
-      margin-bottom: 0px;
-    }
-  }
   &__image--right {
     height: auto;
     width: 244px;
