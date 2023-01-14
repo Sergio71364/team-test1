@@ -24,6 +24,13 @@
       color: #828282;
     }
   }
+  &--accent {
+    font-size: 40px;
+    color: var(--color-accent-yellow);
+    @include for-size(tablet) {
+      font-size: 64px;
+    }
+  }
   &__rest-details {
     font-size: 40px;
     color: #fff;
