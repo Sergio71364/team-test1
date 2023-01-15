@@ -58,11 +58,18 @@
       align-items: center;
     }
   }
-  &__socials- &__socials-link {
+  &__socials-link {
     display: none;
     @extend %link;
     @include for-size(tablet) {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 143px;
+      padding: 10px 12px;
+      gap: 11px;
+      border: 0.5px solid var(--color-accent-yellow);
+      border-radius: 2px;
     }
   }
 }
