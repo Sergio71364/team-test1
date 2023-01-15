@@ -2,6 +2,9 @@
   @extend %list;
   .left & {
     left: 15px;
+    @include for-size(tablet) {
+      left: -15px;
+    }
   }
   .right & {
     right: 10px;
@@ -14,25 +17,47 @@
   height: 32px;
   gap: 32px;
   position: absolute;
+  bottom: 16px;
 }
 
 section[data-slider='basic'] .swiper-arrows {
   bottom: 16px;
 }
 section[data-slider='dark'] .swiper-arrows {
-  bottom: -16px;
+  // bottom: -16px;
 }
 
-.right .swiper-arrows {
+section[data-slider='basic'] .right .swiper-arrows {
   right: var(--padding-mobile);
-
   @include for-size(tablet) {
+    right: var(--padding-tablet);
+  }
+  @include for-size(desktop) {
+    right: var(--padding-desktop);
   }
 }
-.left .swiper-arrows {
-  left: var(--padding-mobile);
 
+section[data-slider='basic'] .left .swiper-arrows {
+  left: var(--padding-mobile);
   @include for-size(tablet) {
+    left: var(--padding-tablet);
+  }
+  @include for-size(desktop) {
+    left: var(--padding-desktop);
+  }
+}
+
+section[data-slider='dark'] .right .swiper-arrows {
+  right: var(--padding-mobile);
+  @include for-size(tablet) {
+    right: 0;
+  }
+}
+
+section[data-slider='dark'] .left .swiper-arrows {
+  left: var(--padding-mobile);
+  @include for-size(tablet) {
+    left: 0;
   }
 }
 
@@ -92,7 +117,9 @@ section[data-slider='basic'] .swiper-container-out {
 section[data-slider='dark'] .swiper-container-out {
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 60px;
   outline: 1px dotted red;
+  margin-bottom: 20px;
   @include for-size(tablet) {
     width: 68%;
   }

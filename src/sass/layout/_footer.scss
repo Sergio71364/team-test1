@@ -59,10 +59,9 @@
     }
   }
   &__socials-link {
-    display: none;
+    display: flex;
     @extend %link;
     @include for-size(tablet) {
-      display: flex;
       align-items: center;
       justify-content: space-between;
       width: 143px;
@@ -70,6 +69,12 @@
       gap: 11px;
       border: 0.5px solid var(--color-accent-yellow);
       border-radius: 2px;
+    }
+  }
+  &__socials-title {
+    display: none;
+    @include for-size(tablet) {
+      display: block;
     }
   }
 }
