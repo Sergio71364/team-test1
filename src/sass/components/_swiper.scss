@@ -13,6 +13,27 @@
   align-items: center;
   height: 32px;
   gap: 32px;
+  position: absolute;
+}
+
+section[data-slider='basic'] .swiper-arrows {
+  bottom: 16px;
+}
+section[data-slider='dark'] .swiper-arrows {
+  bottom: -16px;
+}
+
+.right .swiper-arrows {
+  right: var(--padding-mobile);
+
+  @include for-size(tablet) {
+  }
+}
+.left .swiper-arrows {
+  left: var(--padding-mobile);
+
+  @include for-size(tablet) {
+  }
 }
 
 .swiper-button-next::after,
@@ -54,6 +75,7 @@ section[data-slider='dark'] .swiper-slide {
 }
 
 section[data-slider='basic'] .swiper-container-out {
+  position: relative;
   overflow-x: hidden;
   padding: 60px;
   outline: 1px dotted red;
@@ -68,7 +90,8 @@ section[data-slider='basic'] .swiper-container-out {
   }
 }
 section[data-slider='dark'] .swiper-container-out {
-  overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
   outline: 1px dotted red;
   @include for-size(tablet) {
     width: 68%;
@@ -141,12 +164,6 @@ section[data-slider='dark'] .swiper-slide-prev {
     margin-right: auto;
     margin-left: 0;
   }
-}
-
-.right .swiper-arrows {
-  justify-content: end;
-  margin-top: var(--padding-mobile);
-  margin-right: var(--padding-mobile);
 }
 
 .right .swiper-basic {
